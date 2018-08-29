@@ -534,9 +534,9 @@ blockquote *:last-child {
 }
 li *:last-child {
   margin-bottom: 0;
-}
-p *:last-child {
-  margin-bottom: 0;
+}</div>
+p *:last-child {</div>
+  margin-bottom: 0</div>;
 }
 li > p {
   margin-bottom: calc(1.45rem / 2);

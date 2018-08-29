@@ -1,33 +1,189 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
+const Container = styled.div`
+  background-color: #222222 !important;
+  @media screen and (max-width: 600px) {
+    height: 3%;
+  }
+  .navbar-burger {
+    color: #fff !important;
+    display: inherit;
+    @media screen and (max-width: 600px) {
+      margin-top: -14%;
+  }
+  .navbar-menu {
+    transition-property: width;
+    transition-duration: 2s;
+  }
+`;
+
+const MobilMenu = styled.div`
+  background-color: #fff;
+  color: black;
+  position: unset;
+  left: 0px;
+  top: 0px;
+  height: auto;
+  z-index: 2;
+  padding: 1rem;
+  overflow: hidden;
+`;
+export default class extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.state = {
+      isHidden: true,
+    };
+  }
+
+  toggleMenu() {
+    const { isHidden } = this.state;
+    this.setState({
+      isHidden: !isHidden,
+    });
+  }
+
+  render() {
+    const { isHidden } = this.state;
+    return (
+      <Container
+        id="navMenu"
+        className="navbar is-fixed-top"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div className="container">
+          <div className="navbar-brand">
+            <a className="navbar-item" href="#">
+            Resturent
+            </a>
+          </div>
+          <div
+            id="navbar-menu-id"
+            className={isHidden ? 'navbar-burger is-hidden' : 'navbar-burger'}
+          >
+            <div className="navbar-menu">
+              <div className="navbar-start" />
+              <div className="navbar-end ">
+                <a
+                  className="navbar-item is-size-6 has-text-white"
+                  href="https://bulma.io/"
+                >
+                  Home
+                </a>
+                <a
+                  className="navbar-item is-size-6 has-text-white"
+                  href="https://bulma.io/"
+                >
+                  About me
+                </a>
+                <a
+                  className="navbar-item is-size-6 has-text-white"
+                  href="https://bulma.io/"
+                >
+                  gallery
+                </a>
+                <a
+                  className="navbar-item is-size-6 has-text-white"
+                  href="https://bulma.io/"
+                >
+                  History
+                </a>
+                <a
+                  className="navbar-item is-size-6 has-text-white"
+                  href="https://bulma.io/"
+                >
+                  Menu
+                </a>
+                <a
+                  className="navbar-item is-size-6 has-text-white"
+                  href="https://bulma.io/"
+                >
+                  Reservation
+                </a>
+                <a
+                  className="navbar-item is-size-6 has-text-white"
+                  href="https://bulma.io/"
+                >
+                  Blog
+                </a>
+                <a
+                  className="navbar-item is-size-6 has-text-white"
+                  href="https://bulma.io/"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+          <a
+            role="button"
+            className={isHidden ? 'navbar-burger' : 'is-active navbar-burger'}
+            aria-label="menu"
+            aria-expanded="false"
+            onClick={this.toggleMenu}
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </a>
+        </div>
+        <MobilMenu
+          className={
+            isHidden
+              ? 'has-text-centered is-hidden-desktop is-hidden'
+              : 'has-text-centered is-hidden-desktop'
+          }
         >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-);
-
-export default Header;
+          <aside className="menu">
+            <a
+              className="navbar-item is-size-7 has-text-black"
+              href="https://bulma.io/"
+            >
+              HOME
+            </a>
+            <a
+              className="navbar-item is-size-7 has-text-black"
+              href="https://bulma.io/"
+            >
+              ABOUT ME
+            </a>
+            <a
+              className="navbar-item is-size-7 has-text-black"
+              href="https://bulma.io/"
+            >
+              GALLERY
+            </a>
+            <a
+              className="navbar-item is-size-7 has-text-black"
+              href="https://bulma.io/"
+            >
+              BLOG
+            </a>
+            <a
+              className="navbar-item is-size-7 has-text-black"
+              href="https://bulma.io/"
+            >
+              CONTACT
+            </a>
+            <a
+              className="navbar-item is-size-7 has-text-black"
+              href="https://bulma.io/"
+            >
+              GENERIC
+            </a>
+            <a
+              className="navbar-item is-size-7 has-text-black"
+              href="https://bulma.io/"
+            >
+              ELEMENTS
+            </a>
+          </aside>
+        </MobilMenu>
+      </Container>
+    );
+  }
+}
