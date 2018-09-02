@@ -3,9 +3,15 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SectionOne from '../components/SectionOne';
 import SectionTwo from '../components/SectionTwo';
-import Sectionthree from '../components/Sectionthree';
+import SectionThree from '../components/SectionThree';
 import SectionFour from '../components/SectionFour';
 import SectionFive from '../components/SectionFive';
+import SectionSix from '../components/SectionSix';
+import SectionSeven from '../components/SectionSeven';
+import SectionEight from '../components/SectionEight';
+import SectionNine from '../components/SectioNine';
+import SectionTen from '../components/SectionTen';
+import Contact from '../components/Contact';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -13,9 +19,15 @@ export default class IndexPage extends React.Component {
       <Layout>
         <SectionOne />
         <SectionTwo />
-        <Sectionthree />
+        <SectionThree />
         <SectionFour />
         <SectionFive />
+        <SectionSix />
+        <SectionSeven />
+        <SectionEight />
+        <SectionNine />
+        <SectionTen />
+        <Contact />
       </Layout>
     );
   }

@@ -13,12 +13,20 @@ const Container = styled.div`
   }
 `;
 
+const DishImage = styled.img`
+  width :100%;
+  :hover {
+    width: 115%!important;
+    height: 327px;
+  }
+`;
+
 const SectionFour = () => (
   <Container className="section has-background-light">
     <div className="container">
       <div className="columns">
         <div className="column">
-          <img
+          <DishImage
             src="/images/fruit.jpg"
             className="Image"
             alt="back-to-top"
@@ -27,7 +35,7 @@ const SectionFour = () => (
           <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
         </div>
         <div className="column">
-          <img
+          <DishImage
             src="/images/fruit.jpg"
             className="Image"
             alt="back-to-top"
@@ -36,7 +44,7 @@ const SectionFour = () => (
           <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
         </div>
         <div className="column">
-          <img
+          <DishImage
             src="/images/Dish.png"
             className="Image"
             alt="back-to-top"
@@ -47,7 +55,7 @@ const SectionFour = () => (
       </div>
       <div className="columns">
         <div className="column">
-          <img
+          <DishImage
             src="/images/fruit.jpg"
             className="Image"
             alt="back-to-top"
@@ -56,7 +64,7 @@ const SectionFour = () => (
           <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
         </div>
         <div className="column">
-          <img
+          <DishImage
             src="/images/Dish.png"
             className="Image"
             alt="back-to-top"
@@ -65,7 +73,65 @@ const SectionFour = () => (
           <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
         </div>
         <div className="column">
-          <img
+          <DishImage
+            src="/images/chikeen.jpg"
+            className="Image"
+            alt="back-to-top"
+          />
+          <h1 className="subtitle is-size-6 has-text-black">CHESEBURGER</h1>
+          <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
+        </div>
+      </div>
+      <div className="columns">
+        <div className="column">
+          <DishImage
+            src="/images/fruit.jpg"
+            className="Image"
+            alt="back-to-top"
+          />
+          <h1 className="subtitle is-size-6 has-text-black">CHESEBURGER</h1>
+          <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
+        </div>
+        <div className="column">
+          <DishImage
+            src="/images/fruit.jpg"
+            className="Image"
+            alt="back-to-top"
+          />
+          <h1 className="subtitle is-size-6 has-text-black">CHESEBURGER</h1>
+          <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
+        </div>
+        <div className="column">
+          <DishImage
+            src="/images/Dish.png"
+            className="Image"
+            alt="back-to-top"
+          />
+          <h1 className="subtitle is-size-6 has-text-black">CHESEBURGER</h1>
+          <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
+        </div>
+      </div>
+      <div className="columns">
+        <div className="column">
+          <DishImage
+            src="/images/fruit.jpg"
+            className="Image"
+            alt="back-to-top"
+          />
+          <h1 className="subtitle is-size-6 has-text-black">CHESEBURGER</h1>
+          <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
+        </div>
+        <div className="column">
+          <DishImage
+            src="/images/Dish.png"
+            className="Image"
+            alt="back-to-top"
+          />
+          <h1 className="subtitle is-size-6 has-text-black">CHESEBURGER</h1>
+          <p className="is-size-7 has-text-black para">Lorem Ipsum has been the industry standard dummy  make a type book.</p>
+        </div>
+        <div className="column">
+          <DishImage
             src="/images/chikeen.jpg"
             className="Image"
             alt="back-to-top"

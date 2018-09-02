@@ -29,6 +29,13 @@ const MobilMenu = styled.div`
   padding: 1rem;
   overflow: hidden;
 `;
+
+const Logo = styled.img`
+  width: 53px;
+  height: 50px;
+  padding-top: 12px;
+`;
+
 export default class extends React.Component {
   constructor(props) {
     super(props);
@@ -57,9 +64,11 @@ export default class extends React.Component {
       >
         <div className="container">
           <div className="navbar-brand">
-            <a className="navbar-item" href="#">
-            Resturent
-            </a>
+            <Logo
+              src="/images/logo.jpg"
+              className="Image"
+              alt="back-to-centere"
+            />
           </div>
           <div
             id="navbar-menu-id"
