@@ -12,6 +12,7 @@ import SectionEight from '../components/SectionEight';
 import SectionNine from '../components/SectioNine';
 import SectionTen from '../components/SectionTen';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -28,6 +29,7 @@ export default class IndexPage extends React.Component {
         <SectionNine />
         <SectionTen />
         <Contact />
+        <Footer />
       </Layout>
     );
   }
